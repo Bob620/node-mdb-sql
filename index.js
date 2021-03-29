@@ -88,7 +88,7 @@ class MdbSql {
 
 		const id = v4();
 
-		let sanitizedCommand = command.replace(/[\[\]]/g, '')//.replace(/([-.e+\d]+)(?= <?>?=?=)/g, `'$1'`);
+		let sanitizedCommand = command.replace(/[\[\]]/g, '');
 
 		return new Promise((resolve, reject) => {
 			this.data.onData[id] = [i => {
@@ -123,7 +123,7 @@ module.exports = {
 		return new MdbSql(spawn(path.join(__dirname, 'mdb-sql'), ['-P', path.resolve(Database)], {
 			stdio: 'pipe',
 			env: {
-				LD_LIBRARY_PATH: path.resolve('./external/.libs')
+				LD_LIBRARY_PATH: path.join(__dirname, '.libs')
 			}
 		}));
 	}
