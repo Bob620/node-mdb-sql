@@ -1,0 +1,28 @@
+{
+	"name": "mdb-sql",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"install": "node install.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Bob620/node-mdb-sql.git"
+	},
+	"author": "Bob620",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Bob620/node-mdb-sql/issues"
+	},
+	"homepage": "https://github.com/Bob620/node-mdb-sql#readme",
+	"os": [
+		"darwin",
+		"linux"
+	],
+	"dependencies": {
+		"bent": "^7.3.12",
+		"extract-zip": "^2.0.1"
+	}
+}
