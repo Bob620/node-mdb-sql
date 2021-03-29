@@ -12,7 +12,8 @@ async function get(uri) {
 		await extract('./prebuilt.zip', {
 			dir: path.resolve('./')
 		});
-		await fs.rm('./prebuilt.zip');
+		await fs.unlink('./prebuilt.zip');
+		await fs.chmod('./mdb-sql', 777);
 	} catch(err) {
 		if (err.statusCode === 302)
 			return await get(err.headers.location);
