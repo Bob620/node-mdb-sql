@@ -1,5 +1,5 @@
 {
-	"name": "mdb-sql",
+	"name": "node-mdb-sql",
 	"version": "0.0.1",
 	"description": "",
 	"main": "index.js",
