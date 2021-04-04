@@ -120,7 +120,7 @@ class MdbSql {
 
 module.exports = {
 	open: ({Database}) => {
-		return new MdbSql(spawn(path.join(__dirname, 'mdb-sql'), ['-P', path.resolve(Database)], {
+		return new MdbSql(spawn(path.join(__dirname, 'mdb-sql'), ['-P', `"${path.resolve(Database)}"`], {
 			stdio: 'pipe',
 			env: {
 				LD_LIBRARY_PATH: path.join(__dirname, '.libs')
